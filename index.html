@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Page</title>
+    
+    <link rel="icon" href="./src/imagens/starbucks.png">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+</head>
+<body>
+    
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="./src/imagens/logo.png"  class="logo"></a>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Não é apenas um café.<br>É <span>Starbucks</span>.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum corporis ab dicta, nisi ipsam facere velit. Dignissimos minus voluptatum aliquam quos nostrum ipsa unde, laborum magnam mollitia reiciendis, hic perferendis.</p>
+                <a href="#">Saiba mais</a>
+            </div>
+        <div class="imgBox">
+            <img src="./src/imagens/img1.png" class="starbucks">
+        </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="./src/imagens/thumb1.png" onclick="imgSlider('./src/imagens/img1.png'); changeCircleColor('#017143')"></li>
+        <li><img src="./src/imagens/thumb2.png" onclick="imgSlider('./src/imagens/img2.png'); changeCircleColor('#eb7495')"></li>   
+        <li><img src="./src/imagens/thumb3.png" onclick="imgSlider('./src/imagens/img3.png'); changeCircleColor('#d752b1')"></li>       
+    </ul>
+    <ul class="sci">
+        <li><a href="https://github.com/kyoleht" target='_blank'><img src="./src/imagens/github.png"></a></li>
+        <li><a href="https://www.linkedin.com/in/rafael-ferreira-9b900324a/" target='_blank'><img src="./src/imagens/linkedin icon.png"></a></li>
+    </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+
+</body>
+</html>
